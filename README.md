@@ -3,6 +3,7 @@
 
 ## 1.2 Understanding how it works
 ![timer.png](images/timer.png)
+
 Dalam gambar tersebut, kode pertama-tama mencetak "hola!" di main thread sebelum
 memulai task execution. "howdy!" dicetak setelahnya karena bagian dari task yang dihasilkan
 secara asynchronous. Meskipun "hola!" dan "howdy!" berada dalam queue, "hola!" dieksekusi
@@ -18,6 +19,7 @@ Berikut adalah urutan eksekusi kode:
 
 ## 1.3 Multiple Spawn and removing drop
 ![MultiSpawn.png](images/MultiSpawn.png)
+
 Pada gambar di atas, output yang dihasilkan ketika dilakukan multiple spawn tetap diprint
 setelah "hola!". Akan tetapi, urutan eksekusi akan menjadi random karena setiap task dijalankan
 secara asynchronous dan independen. Kemudian, apabila menghapus perintah `drop` program akan
